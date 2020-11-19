@@ -215,14 +215,13 @@
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeWeChatPay];
 }
 
-+ (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl successBlock:(WeiboShareResult)success failureBlock:(WeiboShareResult)failure {
++ (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage completionBlock:(WeiboShareResult)completion {
     
     SHShareKitManager *sharedManager = [self sharedInstance];
     sharedManager.weiboSharing = [[WeiboSharing alloc] init];
     [sharedManager.weiboSharing setAppIdOrKey:sharedManager.weiboAppId];
-    [sharedManager.weiboSharing setShareSucceedActionBlock:success];
-    [sharedManager.weiboSharing setShareFailedActionBlock:failure];
-    [sharedManager.weiboSharing shareToWeiboWithUUID:uuid title:title descriptions:descriptions thumbnailData:thumbnailData linkUrl:linkUrl];
+    [sharedManager.weiboSharing setShareCompletionBlock:completion];
+    [sharedManager.weiboSharing shareToWeiboWithUUID:uuid title:title descriptions:descriptions thumbnailData:thumbnailData linkUrl:linkUrl isSingleImage:isSingleImage];
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeWeiboSharing];
 }
 

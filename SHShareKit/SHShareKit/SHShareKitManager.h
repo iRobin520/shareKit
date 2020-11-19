@@ -50,8 +50,7 @@ typedef enum {
 + (void)shareToWeChatTimelineWithTitle:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage completionBlock:(WeChatShareResult)completion;
 + (void)wechatPayWithOrderNo:(NSString *)orderNo orderName:(NSString *)orderName orderPrice:(NSString *)orderPrice successBlock:(WeChatPayResult)success failureBlock:(WeChatPayResult)failure;
 + (void)wechatPayWithSignedOrderInfo:(NSDictionary *)orderInfo successBlock:(WeChatPayResult)success failureBlock:(WeChatPayResult)failure;
-+ (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl successBlock:(WeiboShareResult)success failureBlock:(WeiboShareResult)failure;
-
++ (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage completionBlock:(WeiboShareResult)completion;
 
 + (BOOL)handleOpenURL:(NSURL *)url withSourceApplication:(NSString *)sourceApplication;
 

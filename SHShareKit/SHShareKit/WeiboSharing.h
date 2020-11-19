@@ -11,13 +11,12 @@
 #import "SHShareKitDefs.h"
 #import "WeiboSDK.h"
 
-typedef void(^WeiboShareResult)(WBBaseResponse *result);
+typedef void(^WeiboShareResult)(BOOL success);
 
 @interface WeiboSharing : SHShareKitBaseAction<WeiboSDKDelegate,WBHttpRequestDelegate>
 
-- (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl;
+- (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage;
 - (BOOL)handleOpenURL:(NSURL *)url;
-- (void)setShareSucceedActionBlock:(WeiboShareResult)shareSucceedActionBlock;
-- (void)setShareFailedActionBlock:(WeiboShareResult)shareFailedActionBlock;
+- (void)setShareCompletionBlock:(WeiboShareResult)shareCompletionBlock;
 
 @end
