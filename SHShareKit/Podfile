@@ -1,0 +1,9 @@
+platform :ios, '10.0'
+
+target 'SHShareKit' do
+
+ pod 'WechatOpenSDK'
+ pod 'TencentOpenApiSDK'
+ pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+
+end
