@@ -50,6 +50,10 @@
     return [WXApi handleOpenURL:url delegate:self];
 }
 
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity {
+    return [WXApi handleOpenUniversalLink:userActivity delegate:self];
+}
+
 - (void)fetchAccessTokenCode:(NSString *)code {
     self.accessCode = code;
     NSString *requestUrl = [NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",self.appIdOrKey,self.secret,code];

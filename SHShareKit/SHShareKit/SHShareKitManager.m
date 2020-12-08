@@ -74,6 +74,7 @@
 + (void)registerQQApp:(NSString *)appId {
     SHShareKitManager *sharedManager = [self sharedInstance];
     sharedManager.qqOpenId = appId;
+    
 }
 
 - (NSArray *)sourceApplications {
@@ -137,38 +138,34 @@
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeWeiboAuthorization];
 }
 
-+ (void)shareToQzoneWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure {
++ (void)shareToQzoneWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl completionBlock:(QQShareResult)completion {
     SHShareKitManager *sharedManager = [self sharedInstance];
-    sharedManager.qqSharing = [[QQSharing alloc] init];
-    [sharedManager.qqSharing setShareSucceedActionBlock:success];
-    [sharedManager.qqSharing setShareFailedActionBlock:failure];
+    sharedManager.qqSharing = [[QQSharing alloc] initWithOpenId:sharedManager.qqOpenId];
+    [sharedManager.qqSharing setShareCompletionBlock:completion];
     [sharedManager.qqSharing shareToQzoneWithTitle:title descriptions:descriptions previewImageUrl:previewImageUrl linkUrl:linkUrl];
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeQQSharing];
 }
 
-+ (void)shareToQzoneWithImageData:(NSData *)imageData successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure {
++ (void)shareToQzoneWithImageData:(NSData *)imageData completionBlock:(QQShareResult)completion {
     SHShareKitManager *sharedManager = [self sharedInstance];
-    sharedManager.qqSharing = [[QQSharing alloc] init];
-    [sharedManager.qqSharing setShareSucceedActionBlock:success];
-    [sharedManager.qqSharing setShareFailedActionBlock:failure];
+    sharedManager.qqSharing = [[QQSharing alloc] initWithOpenId:sharedManager.qqOpenId];
+    [sharedManager.qqSharing setShareCompletionBlock:completion];
     [sharedManager.qqSharing shareToQzoneWithImageData:imageData];
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeQQSharing];
 }
 
-+ (void)shareToQQWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure {
++ (void)shareToQQWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl completionBlock:(QQShareResult)completion {
     SHShareKitManager *sharedManager = [self sharedInstance];
-    sharedManager.qqSharing = [[QQSharing alloc] init];
-    [sharedManager.qqSharing setShareSucceedActionBlock:success];
-    [sharedManager.qqSharing setShareFailedActionBlock:failure];
+    sharedManager.qqSharing = [[QQSharing alloc] initWithOpenId:sharedManager.qqOpenId];
+    [sharedManager.qqSharing setShareCompletionBlock:completion];
     [sharedManager.qqSharing shareToQQWithTitle:title descriptions:descriptions previewImageUrl:previewImageUrl linkUrl:linkUrl];
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeQQSharing];
 }
 
-+ (void)shareToQQWithImageData:(NSData *)imageData successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure {
++ (void)shareToQQWithImageData:(NSData *)imageData completionBlock:(QQShareResult)completion {
     SHShareKitManager *sharedManager = [self sharedInstance];
-    sharedManager.qqSharing = [[QQSharing alloc] init];
-    [sharedManager.qqSharing setShareSucceedActionBlock:success];
-    [sharedManager.qqSharing setShareFailedActionBlock:failure];
+    sharedManager.qqSharing = [[QQSharing alloc] initWithOpenId:sharedManager.qqOpenId];
+    [sharedManager.qqSharing setShareCompletionBlock:completion];
     [sharedManager.qqSharing shareToQQWithImageData:imageData];
     [sharedManager setCurrentOperationType:SHShareKitOperationTypeQQSharing];
 }
@@ -247,6 +244,20 @@
         } else if (sharedManager.currentOperationType == SHShareKitOperationTypeWeiboAuthorization) {
             return [sharedManager.weiboAuthorization handleOpenURL:url];
         }
+    }
+    return YES;
+}
+
++ (BOOL)handleUniversalLink:(NSUserActivity *)userActivity {
+    SHShareKitManager *sharedManager = [self sharedInstance];
+    if (sharedManager.currentOperationType == SHShareKitOperationTypeWeChatAuthorization) {
+        return [sharedManager.weChatAuthorization handleUniversalLink:userActivity];
+    } else if (sharedManager.currentOperationType == SHShareKitOperationTypeWeChatSharing) {
+        return [sharedManager.weChatSharing handleUniversalLink:userActivity];
+    } else if (sharedManager.currentOperationType == SHShareKitOperationTypeQQAuthorization) {
+        return [sharedManager.qqAuthorization handleUniversalLink:userActivity];
+    } else if (sharedManager.currentOperationType == SHShareKitOperationTypeQQSharing) {
+        return [sharedManager.qqSharing handleUniversalLink:userActivity];
     }
     return YES;
 }

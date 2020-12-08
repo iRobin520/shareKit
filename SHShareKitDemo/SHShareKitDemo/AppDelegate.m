@@ -16,8 +16,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    
-    [SHShareKitManager registerWeChatApp:@"wxxxxxxxx" universalLink:@"https://www.test.com"];
-    [SHShareKitManager registerQQApp:@"xxxxxxx"];
+    //打开写日志到文件的开关
+    [QQApiInterface setSwitchPrintLogToFile:YES];
+    //打印日志的回调
+    [QQApiInterface startLogWithBlock:^(NSString *logStr) {
+        NSLog(@"=================%@",logStr);
+    }];
+    
+    
+    [SHShareKitManager registerWeChatApp:@"wxa22013ea289ef1d8" universalLink:@"https://www.atoken.com"];
+    [SHShareKitManager registerQQApp:@"101915533"];
     [SHShareKitManager registerWeiboApp:@"xxxxx" universalLink:@"https://www.test.com"];
     
     return YES;
@@ -53,6 +61,13 @@
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return [SHShareKitManager handleOpenURL:url withSourceApplication:nil];
+}
+
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler {
+    if([userActivity.activityType isEqualToString:NSUserActivityTypeBrowsingWeb]) {
+        return [SHShareKitManager handleUniversalLink:userActivity];
+    }
+    return YES;
 }
 
 @end

@@ -1,4 +1,4 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/TencentOpenApiSDK/Basic"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/TencentOpenAPI"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/WechatOpenSDK" "${PODS_ROOT}/Headers/Public/Weibo_SDK"
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/WechatOpenSDK/OpenSDK1.8.7.1" "${PODS_ROOT}/Weibo_SDK/libWeiboSDK"

@@ -41,18 +41,14 @@
 }
 
 - (IBAction)userDidTouchShareToQZoneButton:(id)sender {
-    [SHShareKitManager shareToQzoneWithTitle:@"Test Title" descriptions:@"Test Descriptions" previewImageUrl:@"http://img1.gtimg.com/sports/pics/hv1/87/16/1037/67435092.jpg" linkUrl:@"http://sports.qq.com/a/20120510/000650.htm" successBlock:^(QQBaseResp *result) {
-
-    } failureBlock:^(QQBaseResp *result) {
-
+    [SHShareKitManager shareToQzoneWithTitle:@"Test Title" descriptions:@"Test Descriptions" previewImageUrl:@"http://img1.gtimg.com/sports/pics/hv1/87/16/1037/67435092.jpg" linkUrl:@"http://sports.qq.com/a/20120510/000650.htm" completionBlock:^(BOOL isSuccess) {
+        
     }];
 }
 
 - (IBAction)userDidTouchShareToQQButton:(id)sender {
-    [SHShareKitManager shareToQQWithTitle:@"Test Title" descriptions:@"Test Descriptions" previewImageUrl:@"http://img1.gtimg.com/sports/pics/hv1/87/16/1037/67435092.jpg" linkUrl:@"http://sports.qq.com/a/20120510/000650.htm" successBlock:^(QQBaseResp *result) {
-
-    } failureBlock:^(QQBaseResp *result) {
-
+    [SHShareKitManager shareToQQWithTitle:@"Test Title" descriptions:@"Test Descriptions" previewImageUrl:@"http://img1.gtimg.com/sports/pics/hv1/87/16/1037/67435092.jpg" linkUrl:@"http://sports.qq.com/a/20120510/000650.htm" completionBlock:^(BOOL isSuccess) {
+        
     }];
 }
 

@@ -27,9 +27,49 @@
 			<string>tencent</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencentxxxxxxx</string>
+				<string>tencent101915533</string>
 			</array>
 		</dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>tencentApiIdentifier</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>tencent101915533.content</string>
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>qqapi.content.provider</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>tencent101915533.provider</string>
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>mqqapi</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>101915533</string>
+            </array>
+        </dict>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>tencentApiShareprize</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>tencent${TENCENT_APPID}shareprize</string>
+            </array>
+        </dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
@@ -37,7 +77,7 @@
 			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wxaxxxxxxxxx</string>
+				<string>wxa22013ea289ef1d8</string>
 			</array>
 		</dict>
 		<dict>
@@ -47,7 +87,7 @@
 			<string>com.weibo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wbxxxxxxx</string>
+				<string>wb3241060561</string>
 			</array>
 		</dict>
 		<dict>
@@ -72,47 +112,32 @@
 		<string>sinaweibosso</string>
 		<string>weibosdk</string>
 		<string>weibosdk2.5</string>
-		<string>mqqopensdklaunchminiapp</string>
-		<string>mqqopensdkminiapp</string>
-		<string>mqqapi</string>
-		<string>mqq</string>
-		<string>mqqOpensdkSSoLogin</string>
-		<string>mqqconnect</string>
-		<string>mqqopensdkdataline</string>
-		<string>mqqopensdkgrouptribeshare</string>
-		<string>mqqopensdkfriend</string>
-		<string>mqqopensdkapi</string>
-		<string>mqqopensdkapiV2</string>
-		<string>mqqopensdkapiV3</string>
-		<string>mqqopensdkapiV4</string>
-		<string>mqzoneopensdk</string>
-		<string>wtloginmqq</string>
-		<string>wtloginmqq2</string>
-		<string>mqqwpa</string>
-		<string>mqzone</string>
-		<string>mqzonev2</string>
-		<string>mqzoneshare</string>
-		<string>wtloginqzone</string>
-		<string>mqzonewx</string>
-		<string>mqzoneopensdkapiV2</string>
-		<string>mqzoneopensdkapi19</string>
-		<string>mqzoneopensdkapi</string>
-		<string>mqqbrowser</string>
-		<string>mttbrowser</string>
-		<string>tim</string>
-		<string>timapi</string>
-		<string>timopensdkfriend</string>
-		<string>timwpa</string>
-		<string>timgamebindinggroup</string>
-		<string>timapiwallet</string>
-		<string>timOpensdkSSoLogin</string>
-		<string>wtlogintim</string>
-		<string>timopensdkgrouptribeshare</string>
-		<string>timopensdkapiV4</string>
-		<string>timgamebindinggroup</string>
-		<string>timopensdkdataline</string>
-		<string>wtlogintimV1</string>
-		<string>timapiV1</string>
+        <string>tim</string>
+        <string>mqq</string>
+        <string>mqqapi</string>
+        <string>mqqbrowser</string>
+        <string>mttbrowser</string>
+        <string>mqqOpensdkSSoLogin</string>
+        <string>mqqopensdkapiV2</string>
+        <string>mqqopensdkapiV4</string>
+        <string>mqzone</string>
+        <string>mqzoneopensdk</string>
+        <string>mqzoneopensdkapi</string>
+        <string>mqzoneopensdkapi19</string>
+        <string>mqzoneopensdkapiV2</string>
+        <string>mqqapiwallet</string>
+        <string>mqqopensdkfriend</string>
+        <string>mqqopensdkavatar</string>
+        <string>mqqopensdkminiapp</string>
+        <string>mqqopensdkdataline</string>
+        <string>mqqgamebindinggroup</string>
+        <string>mqqopensdkgrouptribeshare</string>
+        <string>tencentapi.qq.reqContent</string>
+        <string>tencentapi.qzone.reqContent</string>
+        <string>mqqthirdappgroup</string>
+        <string>mqqopensdklaunchminiapp</string>
+        <string>mqqopensdkproxylogin</string>
+        <string>mqqopensdknopasteboard</string>
 		<string>fbapi</string>
 		<string>fb-messenger-api</string>
 		<string>fb-messenger-share-api</string>

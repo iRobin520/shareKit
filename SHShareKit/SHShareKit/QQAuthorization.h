@@ -21,6 +21,7 @@ typedef void(^QQFetchUserInfoResult)(APIResponse *response);
 - (void)startAuthorize;
 - (void)fetchUserInfo;
 - (BOOL)handleOpenURL:(NSURL *)url;
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity;
 - (void)setLoginSucceedActionBlock:(QQAuthorizationSucceedBlock)loginSucceedActionBlock;
 - (void)setLoginFailedActionBlock:(QQAuthorizationFailedBlock)loginFailedActionBlock;
 - (void)setFetchUserInfoActionBlock:(QQFetchUserInfoResult)fetchUserInfoActionBlock;

@@ -39,9 +39,9 @@
                             kOPEN_PERMISSION_GET_SIMPLE_USER_INFO,
                             kOPEN_PERMISSION_ADD_ALBUM,
 //                            kOPEN_PERMISSION_ADD_IDOL,
-                            kOPEN_PERMISSION_ADD_ONE_BLOG,
+//                            kOPEN_PERMISSION_ADD_ONE_BLOG,
 //                            kOPEN_PERMISSION_ADD_PIC_T,
-                            kOPEN_PERMISSION_ADD_SHARE,
+//                            kOPEN_PERMISSION_ADD_SHARE,
 //                            kOPEN_PERMISSION_ADD_TOPIC,
 //                            kOPEN_PERMISSION_CHECK_PAGE_FANS,
 //                            kOPEN_PERMISSION_DEL_IDOL,
@@ -65,6 +65,11 @@
 
 - (BOOL)handleOpenURL:(NSURL *)url {
     return [TencentOAuth HandleOpenURL:url];
+}
+
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity {
+    NSURL *url = userActivity.webpageURL;
+    return [TencentOAuth HandleUniversalLink:url];
 }
 
 - (void)fetchUserInfo {

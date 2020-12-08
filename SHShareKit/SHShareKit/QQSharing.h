@@ -10,7 +10,7 @@
 #import "SHShareKitBaseAction.h"
 #import <TencentOpenAPI/QQApiInterface.h>
 
-typedef void(^QQShareResult)(QQBaseResp *result);
+typedef void(^QQShareResult)(BOOL isSuccess);
 
 @interface QQSharing : SHShareKitBaseAction<QQApiInterfaceDelegate>
 
@@ -21,13 +21,14 @@ typedef void(^QQShareResult)(QQBaseResp *result);
  * @param previewImageUrl
  * @param linkUrl, web page url
  */
+- (instancetype)initWithOpenId:(NSString *)openId;
 - (void)shareToQzoneWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl;
 - (void)shareToQzoneWithImageData:(NSData *)imageData;
 - (void)shareToQQWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl;
 - (void)shareToQQWithImageData:(NSData *)imageData;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
-- (void)setShareSucceedActionBlock:(QQShareResult)shareSucceedActionBlock;
-- (void)setShareFailedActionBlock:(QQShareResult)shareFailedActionBlock;
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity;
+- (void)setShareCompletionBlock:(QQShareResult)shareCompletionBlock;
 
 @end

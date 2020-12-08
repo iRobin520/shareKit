@@ -1,34 +1,36 @@
 PODS:
-  - TencentOpenApiSDK (2.9.5):
-    - TencentOpenApiSDK/Basic (= 2.9.5)
-  - TencentOpenApiSDK/Basic (2.9.5)
+  - TencentOpenAPI (3.3.9)
   - WechatOpenSDK (1.8.7.1)
   - Weibo_SDK (3.3.0)
 
 DEPENDENCIES:
-  - TencentOpenApiSDK
+  - TencentOpenAPI (from `https://github.com/Openmingyuers/TencentOpenAPI.git`)
   - WechatOpenSDK
   - Weibo_SDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
 
 SPEC REPOS:
   trunk:
-    - TencentOpenApiSDK
     - WechatOpenSDK
 
 EXTERNAL SOURCES:
+  TencentOpenAPI:
+    :git: https://github.com/Openmingyuers/TencentOpenAPI.git
   Weibo_SDK:
     :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 CHECKOUT OPTIONS:
+  TencentOpenAPI:
+    :commit: f4f93971a5dd1f4aa5a8de181235ee81acd82474
+    :git: https://github.com/Openmingyuers/TencentOpenAPI.git
   Weibo_SDK:
     :commit: acd1f69f62edefe499aa75540fcad2eefcb57c57
     :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 SPEC CHECKSUMS:
-  TencentOpenApiSDK: a0d7716edd6eb438d65828168e8e5137301b436d
+  TencentOpenAPI: fc140853cdaa717caa3fdf0cae7e0b8c8d4c65ab
   WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
   Weibo_SDK: 7478846cccb43c4785ba76b214115fb7ec9dc0d4
 
-PODFILE CHECKSUM: 87bb2b17602857e5d93a8f5b5c28d5e22865822f
+PODFILE CHECKSUM: fe417702cae1aeb67a11b10e13633134500d0ecb
 
 COCOAPODS: 1.9.3

@@ -1,11 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## TencentOpenApiSDK
-
-Copyright (c) 2014 Tencent. All rights reserved.
-
-
 ## WechatOpenSDK
 
 Copyright 2020 tencent.com. All rights reserved.

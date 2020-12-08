@@ -3,7 +3,7 @@ platform :ios, '10.0'
 target 'SHShareKitDemo' do
 
  pod 'WechatOpenSDK'
- pod 'TencentOpenApiSDK'
+ pod 'TencentOpenAPI', :git => 'https://github.com/Openmingyuers/TencentOpenAPI.git'
  pod "Weibo_SDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
 
 end

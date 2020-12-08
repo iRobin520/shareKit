@@ -22,6 +22,7 @@ typedef void(^WeChatFetchUserInfoResult)(id response);
 - (void)startAuthorize;
 - (void)fetchUserInfo;
 - (BOOL)handleOpenURL:(NSURL *)url;
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity;
 - (void)setLoginSucceedActionBlock:(WeChatAuthorizationSucceedBlock)loginSucceedActionBlock;
 - (void)setLoginFailedActionBlock:(WeChatAuthorizationFailedBlock)loginFailedActionBlock;
 - (void)setFetchUserInfoActionBlock:(WeChatFetchUserInfoResult)fetchUserInfoActionBlock;

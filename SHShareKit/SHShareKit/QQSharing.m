@@ -9,11 +9,11 @@
 #import "QQSharing.h"
 #import "QQAuthorization.h"
 
-@interface QQSharing()
+@interface QQSharing()<TencentSessionDelegate>
 
+@property (strong, nonatomic) TencentOAuth *auth;
 @property (strong, nonatomic) QQAuthorization *authorization;
-@property (copy, nonatomic) QQShareResult shareSucceedActionBlock;
-@property (copy, nonatomic) QQShareResult shareFailedActionBlock;
+@property (copy, nonatomic) QQShareResult shareCompletionBlock;
 
 @end
 
@@ -21,10 +21,11 @@
 
 #pragma mark - Object lifecycles
 
-- (instancetype)init {
+- (instancetype)initWithOpenId:(NSString *)openId {
     self = [super init];
     if (self) {
         self.authorization = [[QQAuthorization alloc] init];
+        self.auth = [[TencentOAuth alloc] initWithAppId:openId andDelegate:self];
     }
     return self;
 }
@@ -51,8 +52,10 @@
     NSURL *previewURL = [NSURL URLWithString:previewImageUrl];
     NSURL* url = [NSURL URLWithString:linkUrl];
     QQApiNewsObject* newsObject = [QQApiNewsObject objectWithURL:url title:title description:descriptions previewImageURL:previewURL];
+    [newsObject setCflag:kQQAPICtrlFlagQQShare];
     SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:newsObject];
     QQApiSendResultCode sendResult;
+    
     if (isToQZone) {
         sendResult = [QQApiInterface SendReqToQZone:request];
     } else {
@@ -63,6 +66,7 @@
 
 - (void)shareWithImageData:(NSData *)imageData isToQZone:(BOOL)isToQZone {
     QQApiImageObject *imageObject = [QQApiImageObject objectWithData:imageData previewImageData:imageData title:(NSString *)nil description:nil];
+    [imageObject setCflag:kQQAPICtrlFlagQQShare];
     SendMessageToQQReq *request = [SendMessageToQQReq reqWithContent:imageObject];
     QQApiSendResultCode sendResult;
     if (isToQZone) {
@@ -75,7 +79,7 @@
 
 - (void)handleSendResult:(QQApiSendResultCode)sendResult {
     if (sendResult != EQQAPISENDSUCESS && sendResult != EQQAPIAPPSHAREASYNC) {
-        if (self.shareFailedActionBlock) {
+        if (self.shareCompletionBlock) {
             QQBaseResp *sentFailedResponse = [[QQBaseResp alloc] init];
             sentFailedResponse.result = @"-1";
             switch (sendResult)
@@ -112,23 +116,42 @@
                     break;
                 }
             }
-            self.shareFailedActionBlock(sentFailedResponse);
+            self.shareCompletionBlock(NO);
+        }
+    } else {
+        if (self.shareCompletionBlock) {
+            self.shareCompletionBlock(YES);
         }
     }
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url {
-    return [QQApiInterface handleOpenURL:url delegate:self];
+    return [TencentOAuth HandleOpenURL:url];
+}
+
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity {
+    NSURL *url = userActivity.webpageURL;
+    return [TencentOAuth HandleUniversalLink:url];
 }
 
 #pragma mark - Accessors
 
-- (void)setShareSucceedActionBlock:(QQShareResult)shareSucceedActionBlock {
-    _shareSucceedActionBlock = shareSucceedActionBlock;
+- (void)setShareCompletionBlock:(QQShareResult)shareCompletionBlock {
+    _shareCompletionBlock = shareCompletionBlock;
 }
 
-- (void)setShareFailedActionBlock:(QQShareResult)shareFailedActionBlock {
-    _shareFailedActionBlock = shareFailedActionBlock;
+#pragma mark - TencentOAuth Delegate methods
+
+- (void)tencentDidLogin {
+
+}
+
+- (void)tencentDidNotLogin:(BOOL)cancelled {
+
+}
+
+- (void)tencentDidNotNetWork {
+
 }
 
 #pragma mark - QQApiInterface Delegate methods
@@ -143,12 +166,12 @@
 
 - (void)onResp:(QQBaseResp *)resp {
     if ([resp.result isEqualToString:@"0"]) {
-        if (self.shareSucceedActionBlock) {
-            self.shareSucceedActionBlock(resp);
+        if (self.shareCompletionBlock) {
+            self.shareCompletionBlock(YES);
         }
     } else {
-        if (self.shareFailedActionBlock) {
-            self.shareFailedActionBlock(resp);
+        if (self.shareCompletionBlock) {
+            self.shareCompletionBlock(NO);
         }
     }
 }

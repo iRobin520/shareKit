@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -16,6 +16,15 @@
 			);
 			name = WechatOpenSDK;
 		};
+		CA97C3765B8E3DCC8E1F8E386E78EC22 /* TencentOpenAPI */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B9B2DFD4550005C69BAEAE5B195331C3 /* Build configuration list for PBXAggregateTarget "TencentOpenAPI" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = TencentOpenAPI;
+		};
 		D472C5195936E228AC7F8E400B66E682 /* Weibo_SDK */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = C756FE3A0979E8371394A8FD1ACDB9CC /* Build configuration list for PBXAggregateTarget "Weibo_SDK" */;
@@ -25,78 +34,68 @@
 			);
 			name = Weibo_SDK;
 		};
-		FDE0A71F8836AB752CF7B9A393FBFEED /* TencentOpenApiSDK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 92BA8FF46D5C1C2E75B93AAAE3E82E3D /* Build configuration list for PBXAggregateTarget "TencentOpenApiSDK" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = TencentOpenApiSDK;
-		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		99B662140EE5F986054CE01652A33A93 /* Pods-SHShareKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86AB7D466B01D9A5A683332D2B975BA /* Pods-SHShareKitDemo-dummy.m */; };
+		FC0142212D850273B378646C3B33B69D /* Pods-SHShareKitDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86AB7D466B01D9A5A683332D2B975BA /* Pods-SHShareKitDemo-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A5193BC3DBA259245BC0622D03314AE /* PBXContainerItemProxy */ = {
+		0F03AA315FC3947893F44FE810F8F011 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D472C5195936E228AC7F8E400B66E682;
 			remoteInfo = Weibo_SDK;
 		};
-		C087C2EA9014E495A478CCFA04F99812 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FDE0A71F8836AB752CF7B9A393FBFEED;
-			remoteInfo = TencentOpenApiSDK;
-		};
-		D1B5C6E45AA6D511F1E4D237CBF57674 /* PBXContainerItemProxy */ = {
+		A418F65FD4DDE3073E956CE2382E439B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8554F6236D2AA202CF58503D2DF29730;
 			remoteInfo = WechatOpenSDK;
 		};
+		BF169BE8F381026065F960FC4E45F34E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA97C3765B8E3DCC8E1F8E386E78EC22;
+			remoteInfo = TencentOpenAPI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D47FC2E09BAB4E47884900D6E5BF207 /* TencentOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentOAuth.h; path = Basic/TencentOpenAPI.framework/Headers/TencentOAuth.h; sourceTree = "<group>"; };
-		0EC54654938CA8D853923FF74BC08885 /* libWeiboSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
-		15A16A617400B6D5A58EB049885B491E /* QQApiInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QQApiInterface.h; path = Basic/TencentOpenAPI.framework/Headers/QQApiInterface.h; sourceTree = "<group>"; };
+		0611DF36596DC536E2CD3BF824D32163 /* WechatOpenSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WechatOpenSDK.release.xcconfig; sourceTree = "<group>"; };
+		0C3C2FA629F2643EF4D2CB0834C637C1 /* sdkdef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sdkdef.h; path = TencentOpenAPI.framework/Headers/sdkdef.h; sourceTree = "<group>"; };
+		193116B6AB836BC4B8580AF22756D093 /* WechatOpenSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WechatOpenSDK.debug.xcconfig; sourceTree = "<group>"; };
+		2049EC91C935F44F9620628E7DEF7742 /* TencentOpenAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TencentOpenAPI.debug.xcconfig; sourceTree = "<group>"; };
+		27BD7176F5B7A60FE9E1099EB40835A1 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QQApiInterfaceObject.h; path = TencentOpenAPI.framework/Headers/QQApiInterfaceObject.h; sourceTree = "<group>"; };
 		2B27FBD85D37399DE60467E351E15148 /* Pods-SHShareKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SHShareKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		4C1144C429B81F3C6D6EE066E4C8DF58 /* Weibo_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Weibo_SDK.release.xcconfig; sourceTree = "<group>"; };
-		4C2DDCE296DEEF4D3C8DB237162808BD /* WBHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBHttpRequest.h; path = libWeiboSDK/WBHttpRequest.h; sourceTree = "<group>"; };
+		315F2A3A2D97B7048620581D8CF08AB4 /* WeiboSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = "<group>"; };
+		3979084662C1FC8306B79B0C55177F91 /* QQApiInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QQApiInterface.h; path = TencentOpenAPI.framework/Headers/QQApiInterface.h; sourceTree = "<group>"; };
+		46DC5FF87544A2D0CE0BD57DC79A4AC0 /* TencentOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentOAuth.h; path = TencentOpenAPI.framework/Headers/TencentOAuth.h; sourceTree = "<group>"; };
 		50F94A82DB7C2C51F8E7587575C8B795 /* Pods-SHShareKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHShareKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		537A2F75D554BC63E127C33DEDFD099C /* WechatOpenSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WechatOpenSDK.release.xcconfig; sourceTree = "<group>"; };
 		5398B37AC4B748C3399C5BA888E76E05 /* Pods-SHShareKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHShareKitDemo.release.xcconfig"; sourceTree = "<group>"; };
-		70CEDB440C3B41AB6D923C31E8F91DE1 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = Basic/TencentOpenAPI.framework; sourceTree = "<group>"; };
-		7265CE0824DBF471451E9F6A2E37466F /* WeiboSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = "<group>"; };
-		8AFC21961B1B4914AFB08282E141BF12 /* TencentOpenApiSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TencentOpenApiSDK.debug.xcconfig; sourceTree = "<group>"; };
+		57A90062BC672EFDA162FB6F2403564B /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.8.7.1/WechatAuthSDK.h; sourceTree = "<group>"; };
+		5C5BF3FCDA910DAFEE4FC95C1604F09D /* WeiboSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeiboSDK.h; path = libWeiboSDK/WeiboSDK.h; sourceTree = "<group>"; };
+		5CB28B31781896BFB78225F9EE4D25A6 /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.8.7.1/libWeChatSDK.a; sourceTree = "<group>"; };
+		60671E36ADF9024019C2C748A552C7E4 /* TencentOpenAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TencentOpenAPI.release.xcconfig; sourceTree = "<group>"; };
+		878B2252262EDD8B0B94FEF2A734B807 /* WBHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WBHttpRequest.h; path = libWeiboSDK/WBHttpRequest.h; sourceTree = "<group>"; };
 		8B7FE21C60139B2445F1A17E20B474CA /* Pods-SHShareKitDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SHShareKitDemo-resources.sh"; sourceTree = "<group>"; };
+		9088373F95332304EA71168485C90523 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.8.7.1/WXApi.h; sourceTree = "<group>"; };
+		948D32C78D4C371FC3A93B59BA1F8050 /* Weibo_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Weibo_SDK.release.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3125B2015F0D7D5050C0D85F0755133 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.8.7.1/WXApiObject.h; sourceTree = "<group>"; };
-		A8F815C426006AC1F62D7BE4036B4D1A /* TencentOAuthObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TencentOAuthObject.h; path = Basic/TencentOpenAPI.framework/Headers/TencentOAuthObject.h; sourceTree = "<group>"; };
-		C73ED328A25869CAE05FAE46361F5AB1 /* WeiboSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = WeiboSDK.bundle; path = libWeiboSDK/WeiboSDK.bundle; sourceTree = "<group>"; };
-		CF447AB48D31E4FA89C442BE10099AD5 /* QQApiInterfaceObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QQApiInterfaceObject.h; path = Basic/TencentOpenAPI.framework/Headers/QQApiInterfaceObject.h; sourceTree = "<group>"; };
-		DC41F0959CDD2B7BB47522A87C29FA22 /* WechatAuthSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = OpenSDK1.8.7.1/WechatAuthSDK.h; sourceTree = "<group>"; };
+		A78F2F0E83026ED0E9A1EDB098769140 /* libWeiboSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeiboSDK.a; path = libWeiboSDK/libWeiboSDK.a; sourceTree = "<group>"; };
+		AE6F7A8D5F4496CEC78FB6425F0967F6 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		DCFC2508F3445AD85F62DBBD3B71AB98 /* Pods-SHShareKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SHShareKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E2BFB55E80C1BB9F8D364277877FDE87 /* WechatOpenSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WechatOpenSDK.debug.xcconfig; sourceTree = "<group>"; };
 		E86AB7D466B01D9A5A683332D2B975BA /* Pods-SHShareKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SHShareKitDemo-dummy.m"; sourceTree = "<group>"; };
-		E86DB2FB8DF5DAB976E7C7B9D17D8687 /* Weibo_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Weibo_SDK.debug.xcconfig; sourceTree = "<group>"; };
-		EA775AAA8378EAD4860888AED30E043D /* libWeChatSDK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = OpenSDK1.8.7.1/libWeChatSDK.a; sourceTree = "<group>"; };
-		EED3A3F059BA617CC5B122D582BA9EEB /* sdkdef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sdkdef.h; path = Basic/TencentOpenAPI.framework/Headers/sdkdef.h; sourceTree = "<group>"; };
 		EF4337E287E4EED1C9275ABCA259566E /* libPods-SHShareKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SHShareKitDemo.a"; path = "libPods-SHShareKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F68B3A9A81B2B9BFE046C52B03D41704 /* WXApi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = OpenSDK1.8.7.1/WXApi.h; sourceTree = "<group>"; };
-		FAC8FB747FD0620321B490551154D0DB /* TencentOpenApiSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TencentOpenApiSDK.release.xcconfig; sourceTree = "<group>"; };
+		F9613D565C5E9151DB32D8E03360E458 /* WXApiObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = OpenSDK1.8.7.1/WXApiObject.h; sourceTree = "<group>"; };
+		FD69A61A4E97134B3A7AB2C622B07136 /* Weibo_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Weibo_SDK.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7A9A50205DE31CB68FCD5B745C7FAC21 /* Frameworks */ = {
+		DF0633E5011F90B0A9DB2F7B8F8FF016 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -106,74 +105,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A317DFE8AE703FFC1A976492DC5E96F /* Frameworks */ = {
+		4A6637AADA5FE2B1478582332A96624B /* WechatOpenSDK */ = {
 			isa = PBXGroup;
 			children = (
-				EA775AAA8378EAD4860888AED30E043D /* libWeChatSDK.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2DE2AD49EEA66FDB750E16DBAA43A3B9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E86DB2FB8DF5DAB976E7C7B9D17D8687 /* Weibo_SDK.debug.xcconfig */,
-				4C1144C429B81F3C6D6EE066E4C8DF58 /* Weibo_SDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Weibo_SDK";
-			sourceTree = "<group>";
-		};
-		2ED0223C49E6F9A19350D2B379B2A87D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C73ED328A25869CAE05FAE46361F5AB1 /* WeiboSDK.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		2EDF28230E3DB9A30EE3A410FF8C9FC8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				70CEDB440C3B41AB6D923C31E8F91DE1 /* TencentOpenAPI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3677031BEE9909C1A0B244191C2AC890 /* WechatOpenSDK */ = {
-			isa = PBXGroup;
-			children = (
-				DC41F0959CDD2B7BB47522A87C29FA22 /* WechatAuthSDK.h */,
-				F68B3A9A81B2B9BFE046C52B03D41704 /* WXApi.h */,
-				A3125B2015F0D7D5050C0D85F0755133 /* WXApiObject.h */,
-				1A317DFE8AE703FFC1A976492DC5E96F /* Frameworks */,
-				F5D7BC599B1132BC683D8DF2EB020018 /* Support Files */,
+				57A90062BC672EFDA162FB6F2403564B /* WechatAuthSDK.h */,
+				9088373F95332304EA71168485C90523 /* WXApi.h */,
+				F9613D565C5E9151DB32D8E03360E458 /* WXApiObject.h */,
+				667EF7E684BC5ED14E8E9CBA4427642B /* Frameworks */,
+				EBB8117985EB22DDF30BE84105DBB976 /* Support Files */,
 			);
 			name = WechatOpenSDK;
 			path = WechatOpenSDK;
 			sourceTree = "<group>";
 		};
-		387074DDA676A19A486021251BC181B4 /* Weibo_SDK */ = {
+		54BB0508215B027715466900B1C50D23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4C2DDCE296DEEF4D3C8DB237162808BD /* WBHttpRequest.h */,
-				7265CE0824DBF471451E9F6A2E37466F /* WeiboSDK.h */,
-				BABF8E602B717A24A58EE6E0FD0A63B1 /* Frameworks */,
-				2ED0223C49E6F9A19350D2B379B2A87D /* Resources */,
-				2DE2AD49EEA66FDB750E16DBAA43A3B9 /* Support Files */,
+				315F2A3A2D97B7048620581D8CF08AB4 /* WeiboSDK.bundle */,
 			);
-			name = Weibo_SDK;
-			path = Weibo_SDK;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		6F70CC6AC6A306FAA355666CA3392FE0 /* Pods */ = {
+		667EF7E684BC5ED14E8E9CBA4427642B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A8417F10BC6451901028E3FEADB26447 /* TencentOpenApiSDK */,
-				3677031BEE9909C1A0B244191C2AC890 /* WechatOpenSDK */,
-				387074DDA676A19A486021251BC181B4 /* Weibo_SDK */,
+				5CB28B31781896BFB78225F9EE4D25A6 /* libWeChatSDK.a */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7422FC524E6F2781EF42A52E58DCAE59 /* Targets Support Files */ = {
@@ -192,27 +150,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7FE3E57577ED083A96A96E23DD7E26A5 /* Basic */ = {
+		7AC8244E3064274EF98E9E9F5FBEB470 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				15A16A617400B6D5A58EB049885B491E /* QQApiInterface.h */,
-				CF447AB48D31E4FA89C442BE10099AD5 /* QQApiInterfaceObject.h */,
-				EED3A3F059BA617CC5B122D582BA9EEB /* sdkdef.h */,
-				0D47FC2E09BAB4E47884900D6E5BF207 /* TencentOAuth.h */,
-				A8F815C426006AC1F62D7BE4036B4D1A /* TencentOAuthObject.h */,
-				2EDF28230E3DB9A30EE3A410FF8C9FC8 /* Frameworks */,
+				A78F2F0E83026ED0E9A1EDB098769140 /* libWeiboSDK.a */,
 			);
-			name = Basic;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A8417F10BC6451901028E3FEADB26447 /* TencentOpenApiSDK */ = {
+		99F42ACE7BB70B199950A7FE56C06BD9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7FE3E57577ED083A96A96E23DD7E26A5 /* Basic */,
-				EA28190E34638F0396887197AE5B5459 /* Support Files */,
+				2049EC91C935F44F9620628E7DEF7742 /* TencentOpenAPI.debug.xcconfig */,
+				60671E36ADF9024019C2C748A552C7E4 /* TencentOpenAPI.release.xcconfig */,
 			);
-			name = TencentOpenApiSDK;
-			path = TencentOpenApiSDK;
+			name = "Support Files";
+			path = "../Target Support Files/TencentOpenAPI";
+			sourceTree = "<group>";
+		};
+		A4E44620BD167A3AEF017BB00CC54D26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE6F7A8D5F4496CEC78FB6425F0967F6 /* TencentOpenAPI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B21C4AA910829008036C6E3219851E6B /* Pods-SHShareKitDemo */ = {
@@ -229,12 +190,38 @@
 			path = "Target Support Files/Pods-SHShareKitDemo";
 			sourceTree = "<group>";
 		};
-		BABF8E602B717A24A58EE6E0FD0A63B1 /* Frameworks */ = {
+		B77F09C466737E918A5B3CCE3A1D3A7F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0EC54654938CA8D853923FF74BC08885 /* libWeiboSDK.a */,
+				FD69A61A4E97134B3A7AB2C622B07136 /* Weibo_SDK.debug.xcconfig */,
+				948D32C78D4C371FC3A93B59BA1F8050 /* Weibo_SDK.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/Weibo_SDK";
+			sourceTree = "<group>";
+		};
+		C0338B164A988407ABC5697B52BAC3B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C940417B1CE7781B6706A4F458CA5AE8 /* TencentOpenAPI */,
+				4A6637AADA5FE2B1478582332A96624B /* WechatOpenSDK */,
+				D9D8D9F3F945F81920789147EC78A2B8 /* Weibo_SDK */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C940417B1CE7781B6706A4F458CA5AE8 /* TencentOpenAPI */ = {
+			isa = PBXGroup;
+			children = (
+				3979084662C1FC8306B79B0C55177F91 /* QQApiInterface.h */,
+				27BD7176F5B7A60FE9E1099EB40835A1 /* QQApiInterfaceObject.h */,
+				0C3C2FA629F2643EF4D2CB0834C637C1 /* sdkdef.h */,
+				46DC5FF87544A2D0CE0BD57DC79A4AC0 /* TencentOAuth.h */,
+				A4E44620BD167A3AEF017BB00CC54D26 /* Frameworks */,
+				99F42ACE7BB70B199950A7FE56C06BD9 /* Support Files */,
+			);
+			name = TencentOpenAPI;
+			path = TencentOpenAPI;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -242,7 +229,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				6F70CC6AC6A306FAA355666CA3392FE0 /* Pods */,
+				C0338B164A988407ABC5697B52BAC3B4 /* Pods */,
 				77B850A6BCE0F015E3284AB48D9F64BF /* Products */,
 				7422FC524E6F2781EF42A52E58DCAE59 /* Targets Support Files */,
 			);
@@ -255,21 +242,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA28190E34638F0396887197AE5B5459 /* Support Files */ = {
+		D9D8D9F3F945F81920789147EC78A2B8 /* Weibo_SDK */ = {
 			isa = PBXGroup;
 			children = (
-				8AFC21961B1B4914AFB08282E141BF12 /* TencentOpenApiSDK.debug.xcconfig */,
-				FAC8FB747FD0620321B490551154D0DB /* TencentOpenApiSDK.release.xcconfig */,
+				878B2252262EDD8B0B94FEF2A734B807 /* WBHttpRequest.h */,
+				5C5BF3FCDA910DAFEE4FC95C1604F09D /* WeiboSDK.h */,
+				7AC8244E3064274EF98E9E9F5FBEB470 /* Frameworks */,
+				54BB0508215B027715466900B1C50D23 /* Resources */,
+				B77F09C466737E918A5B3CCE3A1D3A7F /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TencentOpenApiSDK";
+			name = Weibo_SDK;
+			path = Weibo_SDK;
 			sourceTree = "<group>";
 		};
-		F5D7BC599B1132BC683D8DF2EB020018 /* Support Files */ = {
+		EBB8117985EB22DDF30BE84105DBB976 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E2BFB55E80C1BB9F8D364277877FDE87 /* WechatOpenSDK.debug.xcconfig */,
-				537A2F75D554BC63E127C33DEDFD099C /* WechatOpenSDK.release.xcconfig */,
+				193116B6AB836BC4B8580AF22756D093 /* WechatOpenSDK.debug.xcconfig */,
+				0611DF36596DC536E2CD3BF824D32163 /* WechatOpenSDK.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/WechatOpenSDK";
@@ -278,7 +268,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		106312D0ECFAB3DF04BA13B3553F1610 /* Headers */ = {
+		436F5451B1DEE6762CBF3E478F7AC828 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -290,18 +280,18 @@
 /* Begin PBXNativeTarget section */
 		E091C015D53D9C5C731BCD1F2BF89F5E /* Pods-SHShareKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E21FF18BD6C9BC336207AFF52CDF9A1 /* Build configuration list for PBXNativeTarget "Pods-SHShareKitDemo" */;
+			buildConfigurationList = 6A9121188B053E448B9A8E89AB253722 /* Build configuration list for PBXNativeTarget "Pods-SHShareKitDemo" */;
 			buildPhases = (
-				106312D0ECFAB3DF04BA13B3553F1610 /* Headers */,
-				46242B45949F124CAB3BCE1DAD9038D5 /* Sources */,
-				7A9A50205DE31CB68FCD5B745C7FAC21 /* Frameworks */,
+				436F5451B1DEE6762CBF3E478F7AC828 /* Headers */,
+				91ADD3B5EE0A96C4BB3606878152B5B8 /* Sources */,
+				DF0633E5011F90B0A9DB2F7B8F8FF016 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				365DFD7492EF1C2D8009B84DCA3762E4 /* PBXTargetDependency */,
-				6C66C92D4DEE74C4669D134957D222FA /* PBXTargetDependency */,
-				EF846BB19B24F3E619512DE615543457 /* PBXTargetDependency */,
+				4A986A1B06AA163AAA1157A9683D0705 /* PBXTargetDependency */,
+				8C4CC3A9A0857BA973A52FCD728F34F1 /* PBXTargetDependency */,
+				C67634373EEA66C8354D1E0397CCE9DA /* PBXTargetDependency */,
 			);
 			name = "Pods-SHShareKitDemo";
 			productName = "Pods-SHShareKitDemo";
@@ -318,7 +308,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -331,7 +321,7 @@
 			projectRoot = "";
 			targets = (
 				E091C015D53D9C5C731BCD1F2BF89F5E /* Pods-SHShareKitDemo */,
-				FDE0A71F8836AB752CF7B9A393FBFEED /* TencentOpenApiSDK */,
+				CA97C3765B8E3DCC8E1F8E386E78EC22 /* TencentOpenAPI */,
 				8554F6236D2AA202CF58503D2DF29730 /* WechatOpenSDK */,
 				D472C5195936E228AC7F8E400B66E682 /* Weibo_SDK */,
 			);
@@ -339,34 +329,34 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46242B45949F124CAB3BCE1DAD9038D5 /* Sources */ = {
+		91ADD3B5EE0A96C4BB3606878152B5B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B662140EE5F986054CE01652A33A93 /* Pods-SHShareKitDemo-dummy.m in Sources */,
+				FC0142212D850273B378646C3B33B69D /* Pods-SHShareKitDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		365DFD7492EF1C2D8009B84DCA3762E4 /* PBXTargetDependency */ = {
+		4A986A1B06AA163AAA1157A9683D0705 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = TencentOpenApiSDK;
-			target = FDE0A71F8836AB752CF7B9A393FBFEED /* TencentOpenApiSDK */;
-			targetProxy = C087C2EA9014E495A478CCFA04F99812 /* PBXContainerItemProxy */;
+			name = TencentOpenAPI;
+			target = CA97C3765B8E3DCC8E1F8E386E78EC22 /* TencentOpenAPI */;
+			targetProxy = BF169BE8F381026065F960FC4E45F34E /* PBXContainerItemProxy */;
 		};
-		6C66C92D4DEE74C4669D134957D222FA /* PBXTargetDependency */ = {
+		8C4CC3A9A0857BA973A52FCD728F34F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WechatOpenSDK;
 			target = 8554F6236D2AA202CF58503D2DF29730 /* WechatOpenSDK */;
-			targetProxy = D1B5C6E45AA6D511F1E4D237CBF57674 /* PBXContainerItemProxy */;
+			targetProxy = A418F65FD4DDE3073E956CE2382E439B /* PBXContainerItemProxy */;
 		};
-		EF846BB19B24F3E619512DE615543457 /* PBXTargetDependency */ = {
+		C67634373EEA66C8354D1E0397CCE9DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Weibo_SDK;
 			target = D472C5195936E228AC7F8E400B66E682 /* Weibo_SDK */;
-			targetProxy = 0A5193BC3DBA259245BC0622D03314AE /* PBXContainerItemProxy */;
+			targetProxy = 0F03AA315FC3947893F44FE810F8F011 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,9 +425,26 @@
 			};
 			name = Debug;
 		};
+		288BDDA0F380394915BB195350AFBF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2049EC91C935F44F9620628E7DEF7742 /* TencentOpenAPI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		487B944E71B66FCF2073CE10B1EDD255 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C1144C429B81F3C6D6EE066E4C8DF58 /* Weibo_SDK.release.xcconfig */;
+			baseConfigurationReference = 948D32C78D4C371FC3A93B59BA1F8050 /* Weibo_SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -454,7 +461,7 @@
 		};
 		6910ABAAEC43DE37BCC68FB10625B51B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2BFB55E80C1BB9F8D364277877FDE87 /* WechatOpenSDK.debug.xcconfig */;
+			baseConfigurationReference = 193116B6AB836BC4B8580AF22756D093 /* WechatOpenSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -468,26 +475,9 @@
 			};
 			name = Debug;
 		};
-		6E39FA56FCED378443DF442336162F70 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AFC21961B1B4914AFB08282E141BF12 /* TencentOpenApiSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		7F08A32F1629CC28AE914DBEEEC62AAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E86DB2FB8DF5DAB976E7C7B9D17D8687 /* Weibo_SDK.debug.xcconfig */;
+			baseConfigurationReference = FD69A61A4E97134B3A7AB2C622B07136 /* Weibo_SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -561,7 +551,24 @@
 			};
 			name = Release;
 		};
-		B77874FE97CF2017FC38E1A3183A7CCB /* Debug */ = {
+		C300D658D253E3D7F5E4AE6DF9BD5A2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0611DF36596DC536E2CD3BF824D32163 /* WechatOpenSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9D14DCCB54E8918830FAA5F52472271 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50F94A82DB7C2C51F8E7587575C8B795 /* Pods-SHShareKitDemo.debug.xcconfig */;
 			buildSettings = {
@@ -583,26 +590,9 @@
 			};
 			name = Debug;
 		};
-		C300D658D253E3D7F5E4AE6DF9BD5A2B /* Release */ = {
+		E23EFBD17AE662B0C6CF65766AE8B30B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 537A2F75D554BC63E127C33DEDFD099C /* WechatOpenSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E13AA60291D76163E7DDAF851E41F9A7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAC8FB747FD0620321B490551154D0DB /* TencentOpenApiSDK.release.xcconfig */;
+			baseConfigurationReference = 60671E36ADF9024019C2C748A552C7E4 /* TencentOpenAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -618,7 +608,7 @@
 			};
 			name = Release;
 		};
-		E51A4701B7CDED306D39A38B7345D844 /* Release */ = {
+		F70A4DC90DE6F9241337F56EFC4257E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5398B37AC4B748C3399C5BA888E76E05 /* Pods-SHShareKitDemo.release.xcconfig */;
 			buildSettings = {
@@ -662,20 +652,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E21FF18BD6C9BC336207AFF52CDF9A1 /* Build configuration list for PBXNativeTarget "Pods-SHShareKitDemo" */ = {
+		6A9121188B053E448B9A8E89AB253722 /* Build configuration list for PBXNativeTarget "Pods-SHShareKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B77874FE97CF2017FC38E1A3183A7CCB /* Debug */,
-				E51A4701B7CDED306D39A38B7345D844 /* Release */,
+				D9D14DCCB54E8918830FAA5F52472271 /* Debug */,
+				F70A4DC90DE6F9241337F56EFC4257E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92BA8FF46D5C1C2E75B93AAAE3E82E3D /* Build configuration list for PBXAggregateTarget "TencentOpenApiSDK" */ = {
+		B9B2DFD4550005C69BAEAE5B195331C3 /* Build configuration list for PBXAggregateTarget "TencentOpenAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E39FA56FCED378443DF442336162F70 /* Debug */,
-				E13AA60291D76163E7DDAF851E41F9A7 /* Release */,
+				288BDDA0F380394915BB195350AFBF74 /* Debug */,
+				E23EFBD17AE662B0C6CF65766AE8B30B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

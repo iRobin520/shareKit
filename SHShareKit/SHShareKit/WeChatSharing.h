@@ -34,6 +34,7 @@ typedef void(^WeChatShareResult)(BOOL success);
 - (void)shareToWeChatTimelineWithTitle:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity;
 - (void)setShareCompletionBlock:(WeChatShareResult)shareCompletionBlock;
 
 @end

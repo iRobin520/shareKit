@@ -61,6 +61,10 @@
     return [WXApi handleOpenURL:url delegate:self];
 }
 
+- (BOOL)handleUniversalLink:(NSUserActivity *)userActivity {
+    return [WXApi handleOpenUniversalLink:userActivity delegate:self];
+}
+
 #pragma mark - Accessors
 
 - (void)setShareCompletionBlock:(WeChatShareResult)shareCompletionBlock {

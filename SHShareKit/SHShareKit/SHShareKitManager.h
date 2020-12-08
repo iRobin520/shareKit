@@ -42,10 +42,10 @@ typedef enum {
 + (void)fetchWeChatUserInfoWithCompleteBlock:(WeChatFetchUserInfoResult)completeBlock;
 + (void)startWeiboAuthorizationWithSuccessBlock:(WeiboAuthorizationSucceedBlock)success failureBlock:(WeiboAuthorizationFailedBlock)failure;
 + (void)fetchWeiboUserInfoWithCompleteBlock:(WeiboFetchUserInfoResult)completeBlock;
-+ (void)shareToQzoneWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure;
-+ (void)shareToQzoneWithImageData:(NSData *)imageData successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure;
-+ (void)shareToQQWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure;
-+ (void)shareToQQWithImageData:(NSData *)imageData successBlock:(QQShareResult)success failureBlock:(QQShareResult)failure;
++ (void)shareToQzoneWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl completionBlock:(QQShareResult)completion;
++ (void)shareToQzoneWithImageData:(NSData *)imageData completionBlock:(QQShareResult)completion;
++ (void)shareToQQWithTitle:(NSString *)title descriptions:(NSString *)descriptions previewImageUrl:(NSString *)previewImageUrl linkUrl:(NSString *)linkUrl completionBlock:(QQShareResult)completion;
++ (void)shareToQQWithImageData:(NSData *)imageData completionBlock:(QQShareResult)completion;
 + (void)shareToWeChatSessionWithTitle:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage completionBlock:(WeChatShareResult)completion;
 + (void)shareToWeChatTimelineWithTitle:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage completionBlock:(WeChatShareResult)completion;
 + (void)wechatPayWithOrderNo:(NSString *)orderNo orderName:(NSString *)orderName orderPrice:(NSString *)orderPrice successBlock:(WeChatPayResult)success failureBlock:(WeChatPayResult)failure;
@@ -53,5 +53,6 @@ typedef enum {
 + (void)shareToWeiboWithUUID:(NSString *)uuid title:(NSString *)title descriptions:(NSString *)descriptions thumbnailData:(NSData *)thumbnailData linkUrl:(NSString *)linkUrl isSingleImage:(BOOL)isSingleImage completionBlock:(WeiboShareResult)completion;
 
 + (BOOL)handleOpenURL:(NSURL *)url withSourceApplication:(NSString *)sourceApplication;
++ (BOOL)handleUniversalLink:(NSUserActivity *)userActivity;
 
 @end
